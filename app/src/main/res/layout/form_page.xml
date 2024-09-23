@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/montante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Montante (1000)"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/taxa_juros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Taxa de juros (10) %"
+        android:textAlignment="center"
+
+        />
+
+    <EditText
+        android:id="@+id/tempo_anos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Tempo em anos (ex: 1)"
+        android:textAlignment="center"
+
+        />
+
+    <Button
+        android:id="@+id/botao_calcular_juros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular Contribuição Mensal" />
+</LinearLayout>
