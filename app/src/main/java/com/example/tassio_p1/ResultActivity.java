@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import java.text.DecimalFormat;
+
 public class ResultActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class ResultActivity extends Activity {
         String taxaJuros = intent.getStringExtra("taxaJuros");
         String tempoAnos = intent.getStringExtra("tempoAnos");
 
+        DecimalFormat formatacao = new DecimalFormat("0.00");
+
         float fv = Float.parseFloat(montante);
         float i = (Float.parseFloat(taxaJuros) / 100) / 12;
         int n = Integer.parseInt(tempoAnos) * 12;
@@ -31,7 +35,7 @@ public class ResultActivity extends Activity {
         double finalResult = fv * i  / (Math.pow((1 + i), n) - 1);
 
         TextView textValor1Input = findViewById(R.id.valorResultado);
-        textValor1Input.setText(Double.toString(finalResult));
+        textValor1Input.setText(formatacao.format(finalResult));
 
         Button button = findViewById(R.id.botao_voltar);
         button.setOnClickListener(new View.OnClickListener() {

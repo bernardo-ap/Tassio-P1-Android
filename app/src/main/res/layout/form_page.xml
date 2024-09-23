@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Formulário Aposentadoria"
+        android:textSize="30sp"
+        android:layout_marginBottom="40sp"/>
+
     <EditText
         android:id="@+id/montante"
         android:layout_width="match_parent"
@@ -34,7 +42,11 @@
 
     <Button
         android:id="@+id/botao_calcular_juros"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular Contribuição Mensal" />
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:text="Calcular Contribuição Mensal"
+        android:background="@drawable/roundedbutton"/>
 </LinearLayout>
